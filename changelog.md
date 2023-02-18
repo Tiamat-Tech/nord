@@ -22,7 +22,7 @@
 
 ### Color Swatches
 
-The "Adobe Photoshop Color Palette" (`nord.ase`) is now fully compatible to Adobe Photoshop CS6. The previous file was created using [Gpick][gpick] and has been recreated using [Adobe Photoshop CS6][adobe-photoshop] to be fully compatible with the vendor format specification. (#5, 30ae2f4b)
+The "Adobe Photoshop Color Palette" (`nord.ase`) is now fully compatible to Adobe Photoshop CS6. The previous file was created using [Gpick][] and has been recreated using [Adobe Photoshop CS6][adobe-photoshop] to be fully compatible with the vendor format specification. (#5, 30ae2f4b)
 
 ### Documentation
 
@@ -91,13 +91,13 @@ The "Adobe Photoshop Color Palette" (`nord.ase`) is now fully compatible to Adob
 
 ## Features
 
-❯ Added the <img src="http://sass-lang.com/favicon.ico" width=16 height=16 /> [Sass][sass] sources `nord.scss` and the `template-css.scss` CSS template which can be compiled to `nord.css` with [Gulp][gulp] by running `gulp compile-css-template`. (6106be79)
+❯ Added the <img src="http://sass-lang.com/favicon.ico" width=16 height=16 /> [Sass][] sources `nord.scss` and the `template-css.scss` CSS template which can be compiled to `nord.css` with [Gulp][] by running `gulp compile-css-template`. (6106be79)
 
-❯ Added the Sass documentation using <img src="http://sassdoc.com/favicon.png" width=16 height=16 /> [Sassdoc][sassdoc] which can be compiled to a static HTML documentation via [Gulp][gulp] by running `gulp sassdoc`. (ab2a6b45 and 133c597c)
+❯ Added the Sass documentation using <img src="http://sassdoc.com/favicon.png" width=16 height=16 /> [Sassdoc][] which can be compiled to a static HTML documentation via [Gulp][] by running `gulp sassdoc`. (ab2a6b45 and 133c597c)
 
-❯ Added the <img src="http://lesscss.org/public/ico/favicon.ico" width=16 height=16 /> [Less][less] source `nord.less`. (dc568bb2)
+❯ Added the <img src="http://lesscss.org/public/ico/favicon.ico" width=16 height=16 /> [Less][] source `nord.less`. (dc568bb2)
 
-❯ Added the Less source documentation using the [KSS][kss] documentation syntax. Information about the generation of a styleguide can be found in the [official KSS documentation][kss-doc-styleguide].
+❯ Added the Less source documentation using the [KSS][] documentation syntax. Information about the generation of a styleguide can be found in the [official KSS documentation][kss-doc-styleguide].
 
 ❯ Added various native color swatches:
 
@@ -109,7 +109,7 @@ The "Adobe Photoshop Color Palette" (`nord.ase`) is now fully compatible to Adob
 
 - `.aco` - [Adobe Photoshop][adobe-photoshop] Palette
 - `.ase` - [Adobe Swatch Exchange][adobe-help-color-swatches]
-- `.gpa` - [Gpick][gpick] Palette
+- `.gpa` - [Gpick][] Palette
 - `.gpl` - [GIMP][gimp-doc-color-palette], [Inkscape][inkscape-wiki-color-palette] and [Krita][krita-doc-color-palette] Palette
 - `.mtl` - Alias and WaveFront Material
 
@@ -140,6 +140,9 @@ The "Adobe Photoshop Color Palette" (`nord.ase`) is now fully compatible to Adob
 
 [adobe-help-color-swatches]: https://helpx.adobe.com/illustrator/using/using-creating-swatches.html
 [adobe-photoshop]: http://adobe.com/products/photoshop
+
+<!--lint ignore no-unused-definitions-->
+
 [apple-macos-design-guidelines-color]: https://developer.apple.com/macos/human-interface-guidelines/visual-design/color
 [ci-circleci]: https://circleci.com/gh/arcticicestudio/nord
 [ci-travisci]: https://travis-ci.org/arcticicestudio/nord

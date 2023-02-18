@@ -2,7 +2,11 @@
   "name": "nord",
   "version": "0.2.1",
   "description": "An arctic, north-bluish color palette",
-  "author": "Sven Greb <development@svengreb.de> (https://www.svengreb.de)",
+  "author": {
+    "name": "Sven Greb",
+    "email": "development@svengreb.de",
+    "url": "https://www.svengreb.de"
+  },
   "homepage": "https://www.nordtheme.com",
   "repository": {
     "type": "git",
@@ -12,6 +16,9 @@
     "url": "https://github.com/nordtheme/nord/issues"
   },
   "license": "MIT",
+  "engines": {
+    "npm": ">=7.7"
+  },
   "keywords": [
     "nord",
     "arctic",
@@ -31,16 +38,33 @@
   ],
   "style": "src/nord.css",
   "scripts": {
+    "format": "run-s format:pretty",
+    "format:pretty": "prettier --ignore-unknown --no-editorconfig --write . .husky/* src/",
+    "lint": "run-s lint:css lint:less lint:md lint:pretty lint:sass",
+    "lint:ci": "run-s --continue-on-error lint:md lint:css lint:less lint:md lint:sass lint:ci:pretty",
+    "lint:ci:pretty": "prettier --check --ignore-unknown --loglevel silent --no-editorconfig --no-error-on-unmatched-pattern . .husky/* src/",
     "lint:css": "stylelint src/nord.css",
-    "lint:less": "stylelint src/nord.less",
+    "lint:less": "stylelint ./src/nord.less",
+    "lint:md": "remark --no-stdout . \".github/**/*.md\"",
+    "lint:pretty": "prettier --check --ignore-unknown --no-editorconfig . .husky/* src/",
     "lint:sass": "stylelint src/nord.scss",
-    "lint": "npm-run-all --parallel lint:*",
-    "prepare": "npm run test",
-    "test": "npm run lint"
+    "prepare": "run-s prepare:*",
+    "prepare:husky": "husky install",
+    "test": "run-s lint"
   },
   "devDependencies": {
+    "@arcticicestudio/remark-preset-lint": ">=0.4.0 <1.0.0",
+    "husky": "8.0.3",
+    "lint-staged": "13.2.1",
     "npm-run-all": "4.1.5",
-    "stylelint": "9.10.1",
-    "stylelint-config-standard": "18.2.0"
+    "postcss-less": "6.0.0",
+    "prettier": "2.8.7",
+    "prettier-plugin-sh": "0.12.8",
+    "remark-cli": "11.0.0",
+    "stylelint": "15.4.0",
+    "stylelint-config-standard": "32.0.0",
+    "stylelint-config-standard-scss": "7.0.1",
+    "stylelint-less": "1.0.6",
+    "stylelint-prettier": "3.0.0"
   }
 }

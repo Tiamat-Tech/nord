@@ -4,16 +4,28 @@
  */
 
 /**
- * Stylelint configurations.
+ * Configurations for Stylelint.
  * @see https://stylelint.io
  * @see https://stylelint.io/user-guide/rules
  * @see https://github.com/stylelint/stylelint-config-standard
  */
 module.exports = {
-  extends: "stylelint-config-standard",
-  rules: {
-    "color-hex-case": "lower",
-    "comment-empty-line-before": null,
-    "selector-pseudo-element-colon-notation": "single",
-  },
+  extends: ["stylelint-config-standard"],
+  plugins: ["stylelint-prettier"],
+  overrides: [
+    {
+      files: ["*.less"],
+      plugins: ["stylelint-less"],
+      customSyntax: "postcss-less",
+      rules: {
+        "at-rule-no-unknown": null,
+        "color-no-invalid-hex": true,
+        "less/color-no-invalid-hex": true,
+      },
+    },
+    {
+      files: ["*.scss"],
+      extends: ["stylelint-config-standard-scss"],
+    },
+  ],
 };
